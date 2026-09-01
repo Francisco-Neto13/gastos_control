@@ -29,8 +29,8 @@ export default function MonitoringPage() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h1 className="text-xl font-bold text-slate-900">Monitoramento do Motor de Alocação</h1>
-        <p className="text-sm text-slate-500">
+        <h1 className="page-title">Monitoramento do Motor de Alocação</h1>
+        <p className="page-subtitle">
           Indicadores agregados de todas as execuções já realizadas, para acompanhar se o mecanismo de recomendação
           continua funcionando corretamente em produção.
         </p>

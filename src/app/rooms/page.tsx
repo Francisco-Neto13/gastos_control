@@ -68,8 +68,8 @@ export default function RoomsPage() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h1 className="text-xl font-bold text-slate-900">Salas do prédio</h1>
-        <p className="text-sm text-slate-500">
+        <h1 className="page-title">Salas do prédio</h1>
+        <p className="page-subtitle">
           Cadastro do Coordenador Geral: capacidade, andar, tipo, recursos, acessibilidade e disponibilidade de cada sala.
         </p>
       </div>
@@ -161,7 +161,7 @@ export default function RoomsPage() {
       ) : (
         floors.map((floor) => (
           <div key={floor} className="card">
-            <h2 className="mb-2 text-sm font-semibold text-slate-700">{floor}º andar</h2>
+            <h2 className="section-title mb-3 block">{floor}º andar</h2>
             <div className="overflow-x-auto">
               <table className="table-base">
                 <thead>

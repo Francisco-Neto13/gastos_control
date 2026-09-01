@@ -91,8 +91,8 @@ export default function SectorsPage() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h1 className="text-xl font-bold text-slate-900">Setores e Equipes</h1>
-        <p className="text-sm text-slate-500">
+        <h1 className="page-title">Setores e Equipes</h1>
+        <p className="page-subtitle">
           Cada Coordenador de Setor informa a quantidade de funcionários, equipes, horários e restrições que o motor de
           alocação usará para sugerir a melhor distribuição.
         </p>
@@ -226,7 +226,7 @@ export default function SectorsPage() {
       </form>
 
       <div className="card">
-        <h2 className="mb-2 text-sm font-semibold text-slate-700">Equipes do setor selecionado</h2>
+        <h2 className="section-title mb-3 block">Equipes do setor selecionado</h2>
         <div className="overflow-x-auto">
           <table className="table-base">
             <thead>
@@ -278,7 +278,7 @@ export default function SectorsPage() {
       </div>
 
       <div className="card">
-        <h2 className="mb-2 text-sm font-semibold text-slate-700">
+        <h2 className="section-title mb-3 block">
           Restrições de coexistência entre setores (definidas pelo Coordenador Geral)
         </h2>
         <form onSubmit={handleCreateExclusion} className="mb-3 grid grid-cols-2 gap-3 md:grid-cols-4">

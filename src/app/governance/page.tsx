@@ -19,8 +19,8 @@ export default function GovernancePage() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h1 className="text-xl font-bold text-slate-900">Governança e auditoria</h1>
-        <p className="text-sm text-slate-500">
+        <h1 className="page-title">Governança e auditoria</h1>
+        <p className="page-subtitle">
           Toda execução do motor de alocação fica registrada: quem executou, quando, com quais dados, qual versão do
           algoritmo e qual foi o resultado — inclusive as intervenções manuais feitas depois.
         </p>

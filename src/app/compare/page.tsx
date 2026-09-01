@@ -21,8 +21,8 @@ export default function ComparePage() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h1 className="text-xl font-bold text-slate-900">Situação inicial vs. situação otimizada</h1>
-        <p className="text-sm text-slate-500">
+        <h1 className="page-title">Situação inicial vs. situação otimizada</h1>
+        <p className="page-subtitle">
           Compara a distribuição ingênua (primeira sala compatível, sem otimização) com a proposta do motor de alocação,
           usando os mesmos dados de salas e equipes cadastrados no momento.
         </p>

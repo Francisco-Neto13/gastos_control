@@ -30,8 +30,8 @@ export default function ExceptionsPage() {
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h1 className="text-xl font-bold text-slate-900">Exceções e alertas</h1>
-        <p className="text-sm text-slate-500">
+        <h1 className="page-title">Exceções e alertas</h1>
+        <p className="page-subtitle">
           Nem todo problema tem solução perfeita. O sistema não esconde equipes sem sala compatível nem força uma
           alocação inválida — cada exceção mostra a causa e um possível encaminhamento.
         </p>

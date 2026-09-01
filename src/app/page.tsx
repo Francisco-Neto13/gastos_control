@@ -51,8 +51,8 @@ export default function DashboardPage() {
     <div className="flex flex-col gap-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-xl font-bold text-slate-900">Dashboard Executivo — Coordenador Geral</h1>
-          <p className="text-sm text-slate-500">
+          <h1 className="page-title">Dashboard Executivo — Coordenador Geral</h1>
+          <p className="page-subtitle">
             {data.hasRun
               ? `Baseado na execução ${data.runId} (status: ${data.runStatus}).`
               : "Nenhuma alocação foi gerada ainda."}
@@ -103,7 +103,7 @@ export default function DashboardPage() {
       </div>
 
       <div className="card">
-        <h2 className="mb-3 text-sm font-semibold text-slate-700">Ocupação por andar (mapa simplificado do prédio)</h2>
+        <h2 className="section-title mb-3 block">Ocupação por andar (mapa simplificado do prédio)</h2>
         <div className="flex flex-col gap-3">
           {[...data.floors].reverse().map((f) => (
             <div key={f.floor} className="flex items-center gap-3">

@@ -62,8 +62,8 @@ export default function AllocatePage() {
     <div className="flex flex-col gap-6">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <div>
-          <h1 className="text-xl font-bold text-slate-900">Gerar Alocação Otimizada</h1>
-          <p className="text-sm text-slate-500">
+          <h1 className="page-title">Gerar Alocação Otimizada</h1>
+          <p className="page-subtitle">
             Executa o motor de alocação (allocation-engine-v1) sobre as salas e equipes cadastradas.
           </p>
         </div>
@@ -93,7 +93,7 @@ export default function AllocatePage() {
           </div>
 
           <div className="card">
-            <h2 className="mb-2 text-sm font-semibold text-slate-700">Distribuição proposta</h2>
+            <h2 className="section-title mb-3 block">Distribuição proposta</h2>
             <div className="overflow-x-auto">
               <table className="table-base">
                 <thead>
