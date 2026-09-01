@@ -4,45 +4,106 @@
 
 :root {
   color-scheme: light;
+  --shell-sidebar: 16rem;
 }
 
 body {
-  background-color: #f4f6fb;
-  color: #101828;
+  /* Fundo levemente tingido de violeta + textura sutil em vez do cinza chapado. */
+  background-color: #f7f6fb;
+  background-image:
+    radial-gradient(900px 420px at 12% -8%, rgba(124, 58, 237, 0.09), transparent 60%),
+    radial-gradient(760px 380px at 96% 0%, rgba(139, 92, 246, 0.07), transparent 62%);
+  background-attachment: fixed;
+  color: #1c1830;
+  -webkit-font-smoothing: antialiased;
 }
+
+h1,
+h2,
+h3 {
+  @apply font-display tracking-tight;
+}
+
+/* ---------- Superficies ---------- */
 
 .card {
-  @apply rounded-xl border border-slate-200 bg-white p-4 shadow-sm;
+  @apply rounded-2xl border border-slate-200/80 bg-white p-5 shadow-card;
 }
 
+.card-tint {
+  @apply card border-brand-100 bg-gradient-to-br from-brand-50/70 to-white;
+}
+
+/* Cabecalho padrao das paginas. */
+.page-title {
+  @apply text-2xl font-bold text-ink-900;
+}
+
+.page-subtitle {
+  @apply mt-1 max-w-3xl text-sm leading-relaxed text-slate-500;
+}
+
+.section-title {
+  @apply text-sm font-semibold uppercase tracking-wider text-slate-500;
+}
+
+/* ---------- Botoes ---------- */
+
 .btn {
-  @apply inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
 }
 
 .btn-primary {
-  @apply btn bg-brand-600 text-white hover:bg-brand-700;
+  @apply btn bg-brand-600 text-white shadow-pop hover:-translate-y-px hover:bg-brand-700 active:translate-y-0;
 }
 
 .btn-secondary {
-  @apply btn bg-slate-100 text-slate-700 hover:bg-slate-200;
+  @apply btn border border-slate-200 bg-white text-slate-700 hover:border-brand-200 hover:bg-brand-50 hover:text-brand-700;
 }
 
 .btn-danger {
-  @apply btn bg-red-50 text-red-700 hover:bg-red-100;
+  @apply btn border border-red-100 bg-red-50 text-red-700 hover:bg-red-100;
 }
+
+/* ---------- Tabelas ---------- */
 
 .table-base {
   @apply w-full border-collapse text-sm;
 }
 
 .table-base th {
-  @apply border-b border-slate-200 px-3 py-2 text-left font-semibold text-slate-500;
+  @apply border-b border-slate-200 px-3 py-2.5 text-left text-xs font-semibold uppercase tracking-wider text-slate-500;
 }
 
 .table-base td {
-  @apply border-b border-slate-100 px-3 py-2 align-top;
+  @apply border-b border-slate-100 px-3 py-3 align-top text-slate-700;
+}
+
+.table-base tbody tr {
+  @apply transition-colors hover:bg-brand-50/40;
 }
 
 .badge {
-  @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+  @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+}
+
+/* ---------- Navegacao (sidebar) ---------- */
+
+.nav-link {
+  @apply flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-slate-300/80 transition-colors hover:bg-white/10 hover:text-white;
+}
+
+.nav-link-active {
+  @apply bg-brand-600 text-white shadow-pop hover:bg-brand-600 hover:text-white;
+}
+
+.nav-group {
+  @apply px-3 pb-1 pt-5 text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-slate-500;
+}
+
+/* Campos de formulario herdam o novo raio/foco sem tocar no JSX das paginas. */
+input,
+select,
+textarea {
+  @apply rounded-xl border-slate-200 text-sm focus:border-brand-400 focus:ring-brand-400;
 }
